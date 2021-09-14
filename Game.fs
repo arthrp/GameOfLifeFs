@@ -37,6 +37,6 @@ module Game
         | _ -> false
 
     let makeTurn (currentBoard: bool[,]) : bool[,] = 
-        let h, w = currentBoard.GetLength 1, currentBoard.GetLength 0
-        let newBoard = Array2D.init w h (fun x y -> getNewValue currentBoard x y)
+        let height, width = currentBoard.GetLength 1, currentBoard.GetLength 0
+        let newBoard = Array2D.init width height (fun x y -> getNewValue currentBoard x y)
         newBoard
